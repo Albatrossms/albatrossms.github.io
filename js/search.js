@@ -14,7 +14,7 @@ const clkSearch = () => {
         (searchValue(music.Artist, srchArtist)
             && searchValue(music.Song, srchSong)
             && searchValue(music.Album, srchAlbum))
-        && music.Genre == srchGenre
+        && (srchGenre.length===0 || music.Genre == srchGenre)
     );
     if (arrSearchResults.length > 0) {
         document.getElementById("SearchResults").hidden = false;
